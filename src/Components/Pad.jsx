@@ -1,6 +1,6 @@
-export function Pad({bgColor})
+export function Pad({pad , togglePad})
 {
     return (
-        <button style={{backgroundColor : bgColor}}></button>
+        <button style={{backgroundColor : pad.color}} className={pad.on ? "on" : ""} onClick={()=>{togglePad(pad.id)}}></button>
     )
 }

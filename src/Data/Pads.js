@@ -2,7 +2,7 @@ export const Pads = [
     {
         id: 1,
         color: "#F18D8B",
-        on: true
+        on: false
     },
     {
         id: 2,
@@ -12,7 +12,7 @@ export const Pads = [
     {
         id: 3,
         color: "#EEEC79",
-        on: true
+        on: false
     },
     {
         id: 4,

@@ -4,15 +4,27 @@ import { Pads } from './Data/Pads';
 import { Pad } from './Components/Pad';
 
 function App() {
-  const [pads] = useState(Pads)
+  const [pads,setPads] = useState(Pads)
   const [darkMode] = useState(true)
+
+  function togglePad(ButtonId)
+  {
+    setPads(prevPads => (
+      prevPads.map((pad)=> (
+        pad.id == ButtonId ?
+          {...pad , on : !pad.on} : pad
+      )
+      )
+    )
+    )
+  }
 
   return (
     <main>
       <div className="padsContainer" style={{backgroundColor : (darkMode)? "#282c34" : "#fbffdb"}}>
           {
               pads.map(pad =>(
-                <Pad bgColor={pad.color} key={pad.id}/>
+                <Pad  key={pad.id} pad={pad} togglePad={togglePad}/>
               )
               )
           }
