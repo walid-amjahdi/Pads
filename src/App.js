@@ -4,9 +4,11 @@ import { Pads } from './Data/Pads';
 
 function App() {
   const [pads] = useState(Pads)
+  const [darkMode] = useState(true)
+
   return (
     <main>
-      <div className="padsContainer">
+      <div className="padsContainer" style={{backgroundColor : (darkMode)? "#282c34" : "#fbffdb"}}>
           {
               pads.map(pad =>(
                 <button key={pad.id} style={{backgroundColor : pad.color}}>
