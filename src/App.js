@@ -11,7 +11,7 @@ function App() {
   {
     setPads(prevPads => (
       prevPads.map((pad)=> (
-        pad.id == ButtonId ?
+        pad.id === ButtonId ?
           {...pad , on : !pad.on} : pad
       )
       )
