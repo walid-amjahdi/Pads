@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './App.css';
 import { Pads } from './Data/Pads';
+import { Pad } from './Components/Pad';
 
 function App() {
   const [pads] = useState(Pads)
@@ -11,12 +12,9 @@ function App() {
       <div className="padsContainer" style={{backgroundColor : (darkMode)? "#282c34" : "#fbffdb"}}>
           {
               pads.map(pad =>(
-                <button key={pad.id} style={{backgroundColor : pad.color}}>
-
-                </button>
+                <Pad bgColor={pad.color} key={pad.id}/>
               )
               )
-
           }
       </div>
     </main>
