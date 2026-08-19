@@ -12,10 +12,7 @@ function App() {
     setPads((prevPads)=>
     (
       prevPads.map((pad)=>(
-        (pad.id === buttonId)?
-        { ...pad , 
-          on : !pad.on
-        } : pad
+        (pad.id === buttonId)? { ...pad , on : !pad.on } : pad
       ))
     ))
   }
