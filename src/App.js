@@ -9,14 +9,15 @@ function App() {
 
   function togglePad(ButtonId)
   {
-    setPads(prevPads => (
-      prevPads.map((pad)=> (
-        pad.id === ButtonId ?
-          {...pad , on : !pad.on} : pad
-      )
-      )
-    )
-    )
+    setPads((prevPads)=>
+    (
+      prevPads.map((pad)=>(
+        (pad.id === ButtonId)?
+        { ...pad , 
+          on : !pad.on
+        } : pad
+      ))
+    ))
   }
 
   return (
