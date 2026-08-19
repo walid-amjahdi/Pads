@@ -7,12 +7,12 @@ function App() {
   const [pads,setPads] = useState(Pads)
   const [darkMode] = useState(true)
 
-  function togglePad(ButtonId)
+  function togglePad(buttonId)
   {
     setPads((prevPads)=>
     (
       prevPads.map((pad)=>(
-        (pad.id === ButtonId)?
+        (pad.id === buttonId)?
         { ...pad , 
           on : !pad.on
         } : pad
